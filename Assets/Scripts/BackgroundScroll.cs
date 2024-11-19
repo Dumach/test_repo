@@ -9,7 +9,7 @@ using UnityEngine;
 public class BackgroundScroll : MonoBehaviour
 {
     /// \brief The speed at which the background scrolls vertically.
-    public float scrollSpeed = 2f;
+    public float scrollSpeed = 1.75f;
 
     /// \brief The height of the background sprite.
     private float height;
