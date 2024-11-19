@@ -1,15 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 
+/// \class ChangeScene
+/// \brief This class is responsible for loading the missions
 public class ChangeScene : MonoBehaviour
 {
-    public void MoveToScene(int sceneID)
+    /// \brief Handle's the logic of ContinueGame button
+    public void ContinueGame()
     {
-        SceneManager.LoadScene(sceneID);
+        // Saved game is an index of last played mission
+        if (PlayerPrefs.HasKey("CurrentMission"))
+        {
+            int index = PlayerPrefs.GetInt("CurrentMission");
+            if (index > 0) SceneManager.LoadScene(index);
+        }
     }
+
+    /// \brief Handle's the logic of NewGame button
+    public void NewGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    /// \brief Handle's the logic of Exit button
     public void Quit()
     {
         Application.Quit();

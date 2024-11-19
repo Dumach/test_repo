@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 /// \class BackgroundScroll
@@ -9,7 +6,7 @@ using UnityEngine;
 public class BackgroundScroll : MonoBehaviour
 {
     /// \brief The speed at which the background scrolls vertically.
-    public float scrollSpeed = 1.75f;
+    public float scrollSpeed = 2f;
 
     /// \brief The height of the background sprite.
     private float height;
@@ -20,6 +17,7 @@ public class BackgroundScroll : MonoBehaviour
     /// \brief The initial starting position of the background.
     private Vector3 startPosition;
 
+    /// \brief Controls if the background can scroll down
     public bool beginScroll { get; set; } = true;
 
     /// \brief Initializes the background's position, offset, and calculates the height of the background sprite.
