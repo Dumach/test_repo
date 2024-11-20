@@ -199,16 +199,8 @@ public class GameManager : MonoBehaviour
             {
                 Instantiate(playerExplosion, player.transform.position, Quaternion.identity);
             }
+            
             // Play the gameover sound if it's assigned
-
-            /* if (gameOverSound != null)
-            {
-                GameObject sfxPlayer = GameObject.Find("SFXPlayer");
-                AudioSource aud = sfxPlayer.GetComponent<AudioSource>();
-                aud.PlayOneShot(gameOverSound, gameOverVolume);
-            }
-            */
-
             OnGameOverSounds();
 
             // If the player has no health, trigger game over
@@ -300,7 +292,7 @@ public class GameManager : MonoBehaviour
             // Destroy the invader and update the player's score
             Destroy(invader.gameObject);
 
-            // IDE animáció
+            // IDE animï¿½ciï¿½
             SetScore(score + invader.score);
 
             // If a boss destroyed than end the mission
@@ -347,7 +339,7 @@ public class GameManager : MonoBehaviour
         
         if (currentSceneIndex + 1 < SceneManager.sceneCountInBuildSettings && !isLastMission)
         {
-            // Van még mission hátra
+            // Van mï¿½g mission hï¿½tra
             currentSceneIndex += 1;
             SceneManager.LoadScene(currentSceneIndex);
         }
